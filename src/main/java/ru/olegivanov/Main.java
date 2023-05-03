@@ -24,14 +24,13 @@ public class Main {
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                ;
             }
         });
         textGenerator.start();
 
         Thread a = getThread(queueA, 'a');
-        Thread b = getThread(queueA, 'b');
-        Thread c = getThread(queueA, 'c');
+        Thread b = getThread(queueB, 'b');
+        Thread c = getThread(queueC, 'c');
         a.start();
         b.start();
         c.start();
